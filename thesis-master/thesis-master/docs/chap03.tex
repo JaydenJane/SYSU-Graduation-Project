@@ -2,7 +2,40 @@
 \label{cha:method}
 
 \section{蛇形机器人结构}
-
+为了实现蛇形机器人的三维空间中的运动，Shigeo Hiorse教授的科研团队研发的ARM-R3 蛇形机器人关节间采用正交的方式相连接~\cite{Prautsch1999Control}。采用关节正交连接设计的蛇形机器人单元模块和转动副连接，最小的系统模型为三连杆模型，相邻的转动副呈现垂直的关系。最小系统模型对的关节连接模型如图\ref{fig:connect}所示，工作空间如图\ref{fig:space}所示。
+\begin{figure}[h!] % image examples & compare
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.35\textwidth,height=0.15\textheight]{figure/chap03/struct.eps}
+		\caption{关节连接}
+		\label{fig:connect}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth,height=0.15\textheight]{figure/chap03/space.eps}
+		\caption{工作空间}
+		\label{fig:space}
+	\end{subfigure}
+	\caption{蛇形机器人正交连接结构}
+	\label{fig:Orthogonal}
+\end{figure}
+根据正交连接设计的蛇形机器人的实物和仿真下的建模如图\ref{fig:snakeexample}所示。
+\begin{figure}[h!] % image examples & compare
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.7\textwidth,height=0.15\textheight]{figure/chap03/realSnake.eps}
+		\caption{实物蛇形机器人}
+		\label{fig:realSnake}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.7\textwidth,height=0.15\textheight]{figure/chap03/simulateSnake.eps}
+		\caption{仿真蛇形机器人}
+		\label{fig:simulateSnake}
+	\end{subfigure}
+	\caption{蛇形机器人正交连接设计示例}
+	\label{fig:snakeexample}
+\end{figure}
 
 \section{蛇形机器人步态方程}
 %\begin{wrapfigure}{r}{0.4\linewidth}
