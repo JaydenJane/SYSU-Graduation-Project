@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcLib.a  CMakeFiles/cLib.dir/definition.o CMakeFiles/cLib.dir/op.o CMakeFiles/cLib.dir/dataRead.o CMakeFiles/cLib.dir/preWork.o CMakeFiles/cLib.dir/mse_regression.o
+/usr/bin/ranlib libcLib.a

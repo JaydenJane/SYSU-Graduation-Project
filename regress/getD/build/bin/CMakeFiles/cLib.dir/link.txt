@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcLib.a  CMakeFiles/cLib.dir/op.o
+/usr/bin/ranlib libcLib.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libapiLib.a  CMakeFiles/apiLib.dir/extApi.o CMakeFiles/apiLib.dir/extApiPlatform.o
+/usr/bin/ranlib libapiLib.a

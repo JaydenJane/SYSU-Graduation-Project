@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/main.dir/definition.o CMakeFiles/main.dir/dataRead.o CMakeFiles/main.dir/main.o CMakeFiles/main.dir/kmeans.o  -o main -rdynamic 

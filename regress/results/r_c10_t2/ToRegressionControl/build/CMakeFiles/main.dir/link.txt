@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/main.dir/main.o  -o main  -L/home/d101/Final/regress/run_error_by_cluster/error_10_2_0/ToRegressionControl/build/bin -rdynamic bin/libapiLib.a bin/libvLib.a bin/libcLib.a -lpthread 

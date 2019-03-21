@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/d101/Final/regress/dataCombine/src/main.cpp
+iostream
+-
+sstream
+-
+fstream
+-
+cstdlib
+-
+string
+-
+

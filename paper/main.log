@@ -1,0 +1,1155 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.1.23)  11 MAR 2019 16:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 12 languages loaded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 458.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2012/05/29 v1.1 Improve float mechanism and baselineskip sett
+ings
+\@dblbotnum=\count94
+\c@dblbotnumber=\count95
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count96
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip44
+\subfigcapskip=\skip45
+\subfigcaptopadj=\dimen127
+\subfigbottomskip=\skip46
+\subfigcapmargin=\dimen128
+\subfiglabelskip=\skip47
+\c@subfigure=\count97
+\c@lofdepth=\count98
+\c@subtable=\count99
+\c@lotdepth=\count100
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip48
+\subfig@bottom=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/refstyle/refstyle.sty
+Package: refstyle 2010/11/02 v0.5 Reference formatting (DNJ Els)
+Package refstyle Info: Config file refstyle.cfg used on input line 322.
+
+(/usr/share/texlive/texmf-dist/tex/latex/refstyle/refstyle.cfg
+File: refstyle.cfg 2010/11/02 0.5 Configuration file for refstyle (DNJ Els)
+Package refstyle Info: New reference template \newref{part} on input line 468.
+Package refstyle Info: \partkey created on input line 468.
+Package refstyle Info: \partlabel created on input line 468.
+Package refstyle Info: \partref created on input line 468.
+Package refstyle Info: \Partref created on input line 468.
+Package refstyle Info: \partrangeref created on input line 468.
+Package refstyle Info: \Partrangeref created on input line 468.
+Package refstyle Info: \partpageref created on input line 468.
+Package refstyle Info: New reference template \newref{chap} on input line 501.
+Package refstyle Info: \chapkey created on input line 501.
+Package refstyle Info: \chaplabel created on input line 501.
+Package refstyle Info: \chapref created on input line 501.
+Package refstyle Info: \Chapref created on input line 501.
+Package refstyle Info: \chaprangeref created on input line 501.
+Package refstyle Info: \Chaprangeref created on input line 501.
+Package refstyle Info: \chappageref created on input line 501.
+Package refstyle Info: New reference template \newref{sec} on input line 511.
+Package refstyle Info: \seckey created on input line 511.
+Package refstyle Info: \seclabel created on input line 511.
+Package refstyle Info: \secref created on input line 511.
+Package refstyle Info: \Secref created on input line 511.
+Package refstyle Info: \secrangeref created on input line 511.
+Package refstyle Info: \Secrangeref created on input line 511.
+Package refstyle Info: \secpageref created on input line 511.
+Package refstyle Info: New reference template \newref{eq} on input line 526.
+Package refstyle Info: \eqkey created on input line 526.
+Package refstyle Info: \eqlabel created on input line 526.
+Package refstyle Info: \eqref created on input line 526.
+Package refstyle Info: \Eqref created on input line 526.
+Package refstyle Info: \eqrangeref created on input line 526.
+Package refstyle Info: \Eqrangeref created on input line 526.
+Package refstyle Info: \eqpageref created on input line 526.
+Package refstyle Info: New reference template \newref{fig} on input line 544.
+Package refstyle Info: \figkey created on input line 544.
+Package refstyle Info: \figlabel created on input line 544.
+Package refstyle Info: \figref created on input line 544.
+Package refstyle Info: \Figref created on input line 544.
+Package refstyle Info: \figrangeref created on input line 544.
+Package refstyle Info: \Figrangeref created on input line 544.
+Package refstyle Info: \figpageref created on input line 544.
+Package refstyle Info: New reference template \newref{tab} on input line 553.
+Package refstyle Info: \tabkey created on input line 553.
+Package refstyle Info: \tablabel created on input line 553.
+Package refstyle Info: \tabref created on input line 553.
+Package refstyle Info: \Tabref created on input line 553.
+Package refstyle Info: \tabrangeref created on input line 553.
+Package refstyle Info: \Tabrangeref created on input line 553.
+Package refstyle Info: \tabpageref created on input line 553.
+Package refstyle Info: New reference template \newref{fn} on input line 568.
+Package refstyle Info: \fnkey created on input line 568.
+Package refstyle Info: \fnlabel created on input line 568.
+Package refstyle Info: \fnref created on input line 568.
+Package refstyle Info: \Fnref created on input line 568.
+Package refstyle Info: \fnrangeref created on input line 568.
+Package refstyle Info: \Fnrangeref created on input line 568.
+Package refstyle Info: \fnpageref created on input line 568.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks16
+\float@box=\box28
+\@float@everytoks=\toks17
+\@floatcapt=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count102
+\mult@box=\box30
+\multicol@leftmargin=\dimen129
+\c@unbalance=\count103
+\c@collectmore=\count104
+\doublecol@number=\count105
+\multicoltolerance=\count106
+\multicolpretolerance=\count107
+\full@width=\dimen130
+\page@free=\dimen131
+\premulticols=\dimen132
+\postmulticols=\dimen133
+\multicolsep=\skip50
+\multicolbaselineskip=\skip51
+\partial@page=\box31
+\last@line=\box32
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count108
+\c@finalcolumnbadness=\count109
+\last@try=\dimen134
+\multicolovershoot=\dimen135
+\multicolundershoot=\dimen136
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
+\multicol@sort@counter=\count110
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen138
+\lightrulewidth=\dimen139
+\cmidrulewidth=\dimen140
+\belowrulesep=\dimen141
+\belowbottomsep=\dimen142
+\aboverulesep=\dimen143
+\abovetopsep=\dimen144
+\cmidrulesep=\dimen145
+\cmidrulekern=\dimen146
+\defaultaddspace=\dimen147
+\@cmidla=\count111
+\@cmidlb=\count112
+\@aboverulesep=\dimen148
+\@belowrulesep=\dimen149
+\@thisruleclass=\count113
+\@lastruleclass=\count114
+\@thisrulewidth=\dimen150
+)
+(/usr/share/texlive/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2011/11/23 v2.0 Making table heads with diagonal lines
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2014/01/12 v0.2z Improved picture commands (HjG,RN,JT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2011/04/05 v0.1t pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks18
+\@arclen=\dimen151
+\@arcrad=\dimen152
+\@tempdimd=\dimen153
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count115
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count116
+\FP@xia=\count117
+\FP@xib=\count118
+\FP@xfa=\count119
+\FP@xfb=\count120
+\FP@rega=\count121
+\FP@regb=\count122
+\FP@regs=\count123
+\FP@times=\count124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count125
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+\diagbox@boxa=\box56
+\diagbox@boxb=\box57
+\diagbox@boxm=\box58
+\diagbox@wd=\dimen154
+\diagbox@ht=\dimen155
+\diagbox@sepl=\dimen156
+\diagbox@sepr=\dimen157
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen158
+\extrarowheight=\dimen159
+\NC@list=\toks19
+\extratabsurround=\skip52
+\backup@length=\skip53
+)
+\TX@col@width=\dimen160
+\TX@old@table=\dimen161
+\TX@old@col=\dimen162
+\TX@target=\dimen163
+\TX@delta=\dimen164
+\TX@cols=\count126
+\TX@ftn=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip54
+\f@ncyO@elh=\skip55
+\f@ncyO@erh=\skip56
+\f@ncyO@olh=\skip57
+\f@ncyO@orh=\skip58
+\f@ncyO@elf=\skip59
+\f@ncyO@erf=\skip60
+\f@ncyO@olf=\skip61
+\f@ncyO@orf=\skip62
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip63
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen165
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen166
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count127
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count128
+\leftroot@=\count129
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count130
+\DOTSCASE@=\count131
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+\big@size=\dimen167
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count132
+\c@MaxMatrixCols=\count133
+\dotsspace@=\muskip10
+\c@parentequation=\count134
+\dspbrk@lvl=\count135
+\tag@help=\toks22
+\row@=\count136
+\column@=\count137
+\maxfields@=\count138
+\andhelp@=\toks23
+\eqnshift@=\dimen168
+\alignsep@=\dimen169
+\tagshift@=\dimen170
+\tagwidth@=\dimen171
+\totwidth@=\dimen172
+\lineht@=\dimen173
+\@envbody=\toks24
+\multlinegap=\skip64
+\multlinetaggap=\skip65
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks26
+\c@algorithm=\count139
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count140
+\c@ALG@rem=\count141
+\c@ALG@nested=\count142
+\ALG@tlm=\skip66
+\ALG@thistlm=\skip67
+\c@ALG@Lnr=\count143
+\c@ALG@blocknr=\count144
+\c@ALG@storecount=\count145
+\c@ALG@tmpcounter=\count146
+\ALG@tmplength=\skip68
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count147
+\Gm@cntv=\count148
+\c@Gm@tempcnt=\count149
+\Gm@bindingoffset=\dimen174
+\Gm@wd@mp=\dimen175
+\Gm@odd@mp=\dimen176
+\Gm@even@mp=\dimen177
+\Gm@layoutwidth=\dimen178
+\Gm@layoutheight=\dimen179
+\Gm@layouthoffset=\dimen180
+\Gm@layoutvoffset=\dimen181
+\Gm@dimlist=\toks27
+)
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: 
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(72.2698pt, 650.43037pt, 72.2698pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=650.43037pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-33.34218pt
+* \headheight=12.0pt
+* \headsep=21.342pt
+* \topskip=12.0pt
+* \footskip=25.80774pt
+* \marginparwidth=20.0pt
+* \marginparsep=10.0pt
+* \columnsep=12.0pt
+* \skip\footins=10.79993pt plus 4.79993pt minus 2.39996pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+LaTeX Warning: Unused global option(s):
+    [letterpaperï¼Œconference].
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 338.
+LaTeX Font Info:    ... okay on input line 338.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 338.
+LaTeX Font Info:    ... okay on input line 338.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 338.
+LaTeX Font Info:    ... okay on input line 338.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 338.
+LaTeX Font Info:    ... okay on input line 338.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 338.
+LaTeX Font Info:    ... okay on input line 338.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 338.
+LaTeX Font Info:    ... okay on input line 338.
+
+-- Lines per column: 54 (approximate, difference = 2.43037pt).
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count150
+\scratchdimen=\dimen182
+\scratchbox=\box61
+\nofMPsegments=\count151
+\nofMParguments=\count152
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count153
+\MPscratchDim=\dimen183
+\MPnumerator=\count154
+\makeMPintoPDFobject=\count155
+\everyMPtoPDFconversion=\toks29
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(72.2698pt, 650.43037pt, 72.2698pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=650.43037pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-33.34218pt
+* \headheight=12.0pt
+* \headsep=21.342pt
+* \topskip=12.0pt
+* \footskip=25.80774pt
+* \marginparwidth=20.0pt
+* \marginparsep=10.0pt
+* \columnsep=12.0pt
+* \skip\footins=10.79993pt plus 4.79993pt minus 2.39996pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 411.
+LaTeX Font Info:    Try loading font information for U+msa on input line 411.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 411.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./introduction.tex
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+) (./Overview.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+]
+Package epstopdf Info: Source file: <fig/mainwork/stepMap.eps>
+(epstopdf)                    date: 2018-02-27 15:47:16
+(epstopdf)                    size: 285902 bytes
+(epstopdf)             Output file: <fig/mainwork/stepMap-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-02-27 15:47:35
+(epstopdf)                    size: 133076 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/mainwork/stepMap-eps-c
+onverted-to.pdf fig/mainwork/stepMap.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/mainwork/stepMap-eps-converted-to.pdf, id=11, 843.15pt x 463.7325pt>
+File: fig/mainwork/stepMap-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/mainwork/stepMap-eps-converted-to.pdf>
+Package pdftex.def Info: fig/mainwork/stepMap-eps-converted-to.pdf used on inpu
+t line 5.
+(pdftex.def)             Requested size: 244.23706pt x 139.99823pt.
+) (./mainwork.tex [2 <./fig/mainwork/stepMap-eps-converted-to.pdf>]
+Overfull \hbox (19.7984pt too wide) in alignment at lines 174--178
+ [][][] []
+ []
+
+[3]) (./experiment.tex
+Package epstopdf Info: Source file: <fig/experiment/170912/clusize.eps>
+(epstopdf)                    date: 2018-02-26 15:55:14
+(epstopdf)                    size: 22030 bytes
+(epstopdf)             Output file: <fig/experiment/170912/clusize-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2018-02-26 15:56:18
+(epstopdf)                    size: 7455 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/clus
+ize-eps-converted-to.pdf fig/experiment/170912/clusize.eps>
+(epstopdf)             \includegraphics on input line 12.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/clusize-eps-converted-to.pdf, id=43, 542.025pt x 201.753
+75pt>
+File: fig/experiment/170912/clusize-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use fig/experiment/170912/clusize-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/clusize-eps-converted-to.pdf use
+d on input line 12.
+(pdftex.def)             Requested size: 244.2398pt x 124.99982pt.
+Package epstopdf Info: Source file: <fig/experiment/170912/cluster.eps>
+(epstopdf)                    date: 2018-01-29 15:22:30
+(epstopdf)                    size: 28498 bytes
+(epstopdf)             Output file: <fig/experiment/170912/cluster-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2018-01-29 15:23:07
+(epstopdf)                    size: 8523 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/clus
+ter-eps-converted-to.pdf fig/experiment/170912/cluster.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/cluster-eps-converted-to.pdf, id=44, 361.35pt x 252.945p
+t>
+File: fig/experiment/170912/cluster-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use fig/experiment/170912/cluster-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/cluster-eps-converted-to.pdf use
+d on input line 19.
+(pdftex.def)             Requested size: 195.39433pt x 136.77737pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/34s.eps>
+(epstopdf)                    date: 2018-02-28 15:23:02
+(epstopdf)                    size: 310315 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/34s-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-02-28 15:24:35
+(epstopdf)                    size: 27006 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/34s-eps
+-converted-to.pdf fig/experiment/BSB/34s.eps>
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/34s-eps-converted-to.pdf, id=45, 110.4125pt x 436.63126pt>
+File: fig/experiment/BSB/34s-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/experiment/BSB/34s-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/34s-eps-converted-to.pdf used on in
+put line 30.
+(pdftex.def)             Requested size: 60.05652pt x 144.53514pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/49s.eps>
+(epstopdf)                    date: 2018-02-28 15:23:02
+(epstopdf)                    size: 308595 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/49s-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-02-28 15:25:26
+(epstopdf)                    size: 30732 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/49s-eps
+-converted-to.pdf fig/experiment/BSB/49s.eps>
+(epstopdf)             \includegraphics on input line 33.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/49s-eps-converted-to.pdf, id=46, 110.4125pt x 436.63126pt>
+File: fig/experiment/BSB/49s-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/experiment/BSB/49s-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/49s-eps-converted-to.pdf used on in
+put line 33.
+(pdftex.def)             Requested size: 60.05652pt x 144.53514pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/1m05s.eps>
+(epstopdf)                    date: 2018-02-28 15:23:02
+(epstopdf)                    size: 307764 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/1m05s-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-02-28 15:25:27
+(epstopdf)                    size: 30509 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/1m05s-e
+ps-converted-to.pdf fig/experiment/BSB/1m05s.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/1m05s-eps-converted-to.pdf, id=47, 110.4125pt x 436.63126pt
+>
+File: fig/experiment/BSB/1m05s-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/experiment/BSB/1m05s-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/1m05s-eps-converted-to.pdf used on 
+input line 36.
+(pdftex.def)             Requested size: 60.05652pt x 144.53514pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/1m17s.eps>
+(epstopdf)                    date: 2018-02-28 15:23:02
+(epstopdf)                    size: 309331 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/1m17s-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-02-28 15:25:28
+(epstopdf)                    size: 32487 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/1m17s-e
+ps-converted-to.pdf fig/experiment/BSB/1m17s.eps>
+(epstopdf)             \includegraphics on input line 39.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/1m17s-eps-converted-to.pdf, id=48, 110.4125pt x 436.63126pt
+>
+File: fig/experiment/BSB/1m17s-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/experiment/BSB/1m17s-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/1m17s-eps-converted-to.pdf used on 
+input line 39.
+(pdftex.def)             Requested size: 60.05652pt x 144.53514pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/1m27s.eps>
+(epstopdf)                    date: 2018-02-28 15:23:02
+(epstopdf)                    size: 313725 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/1m27s-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-02-28 15:25:28
+(epstopdf)                    size: 33181 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/1m27s-e
+ps-converted-to.pdf fig/experiment/BSB/1m27s.eps>
+(epstopdf)             \includegraphics on input line 42.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/1m27s-eps-converted-to.pdf, id=49, 110.4125pt x 436.63126pt
+>
+File: fig/experiment/BSB/1m27s-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/experiment/BSB/1m27s-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/1m27s-eps-converted-to.pdf used on 
+input line 42.
+(pdftex.def)             Requested size: 60.05652pt x 144.53514pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/1m35s.eps>
+(epstopdf)                    date: 2018-02-28 15:23:02
+(epstopdf)                    size: 317130 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/1m35s-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-02-28 15:25:39
+(epstopdf)                    size: 34734 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/1m35s-e
+ps-converted-to.pdf fig/experiment/BSB/1m35s.eps>
+(epstopdf)             \includegraphics on input line 45.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/1m35s-eps-converted-to.pdf, id=50, 110.4125pt x 436.63126pt
+>
+File: fig/experiment/BSB/1m35s-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/experiment/BSB/1m35s-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/1m35s-eps-converted-to.pdf used on 
+input line 45.
+(pdftex.def)             Requested size: 60.05652pt x 144.53514pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/a.eps>
+(epstopdf)                    date: 2018-02-28 20:23:21
+(epstopdf)                    size: 21256 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/a-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-02-28 20:23:54
+(epstopdf)                    size: 7630 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/a-eps-c
+onverted-to.pdf fig/experiment/BSB/a.eps>
+(epstopdf)             \includegraphics on input line 50.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/a-eps-converted-to.pdf, id=51, 289.08pt x 201.75375pt>
+File: fig/experiment/BSB/a-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/experiment/BSB/a-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/a-eps-converted-to.pdf used on inpu
+t line 50.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/p.eps>
+(epstopdf)                    date: 2018-02-28 20:25:28
+(epstopdf)                    size: 22683 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/p-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-02-28 20:25:43
+(epstopdf)                    size: 7369 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/p-eps-c
+onverted-to.pdf fig/experiment/BSB/p.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/p-eps-converted-to.pdf, id=52, 289.08pt x 201.75375pt>
+File: fig/experiment/BSB/p-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/experiment/BSB/p-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/p-eps-converted-to.pdf used on inpu
+t line 54.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/w.eps>
+(epstopdf)                    date: 2018-02-28 20:23:18
+(epstopdf)                    size: 21075 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/w-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-02-28 20:23:54
+(epstopdf)                    size: 7755 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/w-eps-c
+onverted-to.pdf fig/experiment/BSB/w.eps>
+(epstopdf)             \includegraphics on input line 59.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/w-eps-converted-to.pdf, id=53, 289.08pt x 201.75375pt>
+File: fig/experiment/BSB/w-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/experiment/BSB/w-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/w-eps-converted-to.pdf used on inpu
+t line 59.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+Package epstopdf Info: Source file: <fig/experiment/BSB/v.eps>
+(epstopdf)                    date: 2018-02-28 20:22:09
+(epstopdf)                    size: 33037 bytes
+(epstopdf)             Output file: <fig/experiment/BSB/v-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-02-28 20:23:55
+(epstopdf)                    size: 14665 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/BSB/v-eps-c
+onverted-to.pdf fig/experiment/BSB/v.eps>
+(epstopdf)             \includegraphics on input line 63.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/BSB/v-eps-converted-to.pdf, id=54, 289.08pt x 201.75375pt>
+File: fig/experiment/BSB/v-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/experiment/BSB/v-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/BSB/v-eps-converted-to.pdf used on inpu
+t line 63.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+
+
+LaTeX Warning: Float too large for page by 165.88231pt on input line 66.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./fig/experiment/170912/clusize-eps-converted-to.pdf>]
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no ¼ in font ptmr7t!
+Missing character: There is no Œ in font ptmr7t!
+Package epstopdf Info: Source file: <fig/experiment/170912/samplifier.eps>
+(epstopdf)                    date: 2018-02-28 20:19:20
+(epstopdf)                    size: 24660 bytes
+(epstopdf)             Output file: <fig/experiment/170912/samplifier-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2018-02-28 20:19:46
+(epstopdf)                    size: 10429 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/samp
+lifier-eps-converted-to.pdf fig/experiment/170912/samplifier.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/samplifier-eps-converted-to.pdf, id=63, 289.08pt x 201.7
+5375pt>
+File: fig/experiment/170912/samplifier-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use fig/experiment/170912/samplifier-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/samplifier-eps-converted-to.pdf 
+used on input line 155.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+Package epstopdf Info: Source file: <fig/experiment/170912/sphase.eps>
+(epstopdf)                    date: 2018-02-28 20:18:23
+(epstopdf)                    size: 24324 bytes
+(epstopdf)             Output file: <fig/experiment/170912/sphase-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-02-28 20:19:46
+(epstopdf)                    size: 9846 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/spha
+se-eps-converted-to.pdf fig/experiment/170912/sphase.eps>
+(epstopdf)             \includegraphics on input line 159.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/sphase-eps-converted-to.pdf, id=64, 289.08pt x 201.75375
+pt>
+File: fig/experiment/170912/sphase-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use fig/experiment/170912/sphase-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/sphase-eps-converted-to.pdf used
+ on input line 159.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+Package epstopdf Info: Source file: <fig/experiment/170912/sarate.eps>
+(epstopdf)                    date: 2018-02-28 20:18:15
+(epstopdf)                    size: 24512 bytes
+(epstopdf)             Output file: <fig/experiment/170912/sarate-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-02-28 20:19:47
+(epstopdf)                    size: 10244 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/sara
+te-eps-converted-to.pdf fig/experiment/170912/sarate.eps>
+(epstopdf)             \includegraphics on input line 163.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/sarate-eps-converted-to.pdf, id=65, 289.08pt x 201.75375
+pt>
+File: fig/experiment/170912/sarate-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use fig/experiment/170912/sarate-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/sarate-eps-converted-to.pdf used
+ on input line 163.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+Package epstopdf Info: Source file: <fig/experiment/170912/svel.eps>
+(epstopdf)                    date: 2018-02-28 20:19:24
+(epstopdf)                    size: 25038 bytes
+(epstopdf)             Output file: <fig/experiment/170912/svel-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-02-28 20:19:47
+(epstopdf)                    size: 11491 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/svel
+-eps-converted-to.pdf fig/experiment/170912/svel.eps>
+(epstopdf)             \includegraphics on input line 167.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/svel-eps-converted-to.pdf, id=66, 289.08pt x 201.75375pt
+>
+File: fig/experiment/170912/svel-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/experiment/170912/svel-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/svel-eps-converted-to.pdf used o
+n input line 167.
+(pdftex.def)             Requested size: 113.99788pt x 94.99974pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <fig/experiment/170912/figCE.eps>
+(epstopdf)                    date: 2018-02-28 21:39:49
+(epstopdf)                    size: 20594 bytes
+(epstopdf)             Output file: <fig/experiment/170912/figCE-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2018-02-28 21:40:13
+(epstopdf)                    size: 6199 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/figC
+E-eps-converted-to.pdf fig/experiment/170912/figCE.eps>
+(epstopdf)             \includegraphics on input line 184.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/figCE-eps-converted-to.pdf, id=67, 172.645pt x 144.54pt>
+File: fig/experiment/170912/figCE-eps-converted-to.pdf Graphic file (type pdf)
+<use fig/experiment/170912/figCE-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/figCE-eps-converted-to.pdf used 
+on input line 184.
+(pdftex.def)             Requested size: 114.00136pt x 94.99968pt.
+Package epstopdf Info: Source file: <fig/experiment/170912/TimeSpent.eps>
+(epstopdf)                    date: 2018-02-28 22:05:06
+(epstopdf)                    size: 20750 bytes
+(epstopdf)             Output file: <fig/experiment/170912/TimeSpent-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-28 22:05:25
+(epstopdf)                    size: 6569 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/experiment/170912/Time
+Spent-eps-converted-to.pdf fig/experiment/170912/TimeSpent.eps>
+(epstopdf)             \includegraphics on input line 188.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/experiment/170912/TimeSpent-eps-converted-to.pdf, id=68, 216.81pt x 180.67
+5pt>
+File: fig/experiment/170912/TimeSpent-eps-converted-to.pdf Graphic file (type p
+df)
+ <use fig/experiment/170912/TimeSpent-eps-converted-to.pdf>
+Package pdftex.def Info: fig/experiment/170912/TimeSpent-eps-converted-to.pdf u
+sed on input line 188.
+(pdftex.def)             Requested size: 114.00229pt x 94.99915pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./conclusion.tex) (./main.bbl [5 <./fig/experiment/170912/cluster-eps-conver
+ted-to.pdf>]) [6 <./fig/experiment/BSB/34s-eps-converted-to.pdf> <./fig/experim
+ent/BSB/49s-eps-converted-to.pdf> <./fig/experiment/BSB/1m05s-eps-converted-to.
+pdf> <./fig/experiment/BSB/1m17s-eps-converted-to.pdf> <./fig/experiment/BSB/1m
+27s-eps-converted-to.pdf> <./fig/experiment/BSB/1m35s-eps-converted-to.pdf> <./
+fig/experiment/BSB/a-eps-converted-to.pdf> <./fig/experiment/BSB/p-eps-converte
+d-to.pdf> <./fig/experiment/BSB/w-eps-converted-to.pdf> <./fig/experiment/BSB/v
+-eps-converted-to.pdf>] [7 <./fig/experiment/170912/samplifier-eps-converted-to
+.pdf> <./fig/experiment/170912/sphase-eps-converted-to.pdf> <./fig/experiment/1
+70912/sarate-eps-converted-to.pdf> <./fig/experiment/170912/svel-eps-converted-
+to.pdf> <./fig/experiment/170912/figCE-eps-converted-to.pdf> <./fig/experiment/
+170912/TimeSpent-eps-converted-to.pdf>] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 6536 strings out of 494724
+ 94679 string characters out of 6174697
+ 197560 words of memory out of 5000000
+ 9655 multiletter control sequences out of 15000+600000
+ 51171 words of font info for 118 fonts, out of 8000000 for 9000
+ 105 hyphenation exceptions out of 8191
+ 38i,14n,43p,1319b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (7 pages, 599850 bytes).
+PDF statistics:
+ 229 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+

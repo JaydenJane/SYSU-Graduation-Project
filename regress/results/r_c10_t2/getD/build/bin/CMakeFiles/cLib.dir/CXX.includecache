@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/d101/Final/regress/getD/CLib/op.cpp
+op.h
+/home/d101/Final/regress/getD/CLib/op.h
+
+/home/d101/Final/regress/getD/CLib/op.h
+iostream
+-
+string.h
+-
+unistd.h
+-
+stdio.h
+-
+sstream
+-
+math.h
+-
+
