@@ -1,12 +1,162 @@
 %% chapter 4 dataset, network structure, experiment and result
 \chapter{实验与结果}
 \label{cha:experiment}
+我们在实验中采用滚动步态作为仿真爬杆实验的基本步态，为了验证蛇形机器人在我们提出的自适应控制框架下能够对于变化的环境表现出适应性，我们在V-REP（Virtual Robotics Experimentation Platform）机器人仿真实验平台上进行建模实验，让机器人在我们的控制框架下在不同直径的杆进行自适应地攀爬运动。
 
+仿真实验主要分为两个过程：训练和运动仿真。我们将运动仿真实验分为两组实验，分别是沿着直径变化的杆的自适应运动实验以及沿着不同直径的直杆做自适应运动实验。
 \section{训练过程}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\linewidth,height=0.35\textheight]{figure/chap05/clusize.eps}
+	\caption{K-MEANS++中不同$N_{k}$取值时的簇方差}
+	\label{fig:clusize}
+\end{figure}
+在数据获取阶段，我们让蛇形机器人在不同的多组参数组合下在25\,cm 和 35\,cm的杆上进行无目的性的攀爬运动，最终总共我们能收集到2万5千组的训练数据。控制参数幅度$A$，相位$\varepsilon$ 和角速度$\omega$的变化区间分别为$[40, \, 80]$，$[0, \, 5]$以及$[1.5, \, 3]$。并且， 幅度参数$A$的变化步长是5，相位参数$\varepsilon$的变化步长是1，以及角速度参数的变化步长为$\omega$ 0.5。 我们让蛇形机器人在不同参数组合下进行爬杆运动，在爬杆过程中收集相应的数据。在数据预处理阶段，我们对训练数据做一个聚类操作。我们通过算式\ref{clu_var}求出不同$N_{k}$的取值下的簇方差（如图\ref{fig:clusize}）。最终$N_{k}=25$下的K-MEANS++聚类结果如图\ref{fig:clustersize}，可以看到大多数簇的成员数量为$1000 \pm 500 $。
 
-\section{机器人在可变直径杆上的运动实验}
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figure/chap05/cluster.eps}
+	\caption{$N_{k}=25$时使用K-MEANS++聚类的结果}
+	\label{fig:clustersize}
+\end{figure}
+
+\section{机器人在直径可变杆上的运动实验}
+在这一部分仿真实验中，我们的实验环境是一个复杂的杆模型。实验所用杆模型主要分为三个部分。 第一和第三部分，即最低和最高的部分的杆的直径都为35\,cm，中间部分用直径为25\,cm的杆来连接。 我们在蛇形机器人80s的运动中记录下记录参数和速度的变化。
+
+记录下来的实验结果如图\ref{fig:BSB}所示。在0\,s到4\,蛇形机器人在初始参数下是无法蜷缩到能卷紧杆的状态的，所以机器人在一开始会不断调整自己的形状以卷紧未知直径的杆。所以在这一阶段，Z轴速度的值是接近于0的。从24\,s到45\,s的运动中，蛇形机器人在直径为 35\,cm的杆上进行攀爬运动。在这一阶段，控制参数$A$, $\varepsilon$以及$\omega$全部都在改变并且 $A$和 $\varepsilon$ 最终会趋于一个比较稳定的值。大概在45\,s时，蛇形机器人到达了杆的直径发生变化的节点，由于直径变化的幅度很大，所以机器人无法马上去卷紧下一个不同直径的杆，于是便导致了这里Z轴速度会接近于0。通过我们提出的运动控制框架，蛇形机器人可以自动调整参数来适应下一个不同直径的杆来继续其攀爬运动。 从图\ref{fig:bsa}, \ref{fig:bsp} 和 \ref{fig:bsw}可以得到，在这个变杆节点参数都在变大，从而顺利地让蛇形机器人可以继续往上爬。同样地，在大概 63\,s时，蛇形机器人来到了第二个变杆节点。蛇形机器人此时也是自动调整控制参数来顺利地继续往上爬。然后可以看到最终所有参数都会趋于一个稳定的值，原因也是后面杆的直径没有再发生变化从而不需要再去调整步态参数来对突变环境做适应性运动。
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.3\textwidth}{
+			\centering
+			\includegraphics[height=160pt,width=0.5\textwidth]{figure/chap05/BSB/34s.eps}
+			\caption{t=24s}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}{
+			\centering
+			\includegraphics[height=160pt,width=0.5\textwidth]{figure/chap05/BSB/49s.eps}
+			\caption{t=35s}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}{
+			\centering
+			\includegraphics[height=160pt,width=0.5\textwidth]{figure/chap05/BSB/1m05s.eps}
+			\caption{t=47s}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}{
+			\centering
+			\includegraphics[height=160pt,width=0.5\textwidth]{figure/chap05/BSB/1m17s.eps}
+			\caption{t=56s}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}{
+			\centering
+			\includegraphics[height=160pt,width=0.5\textwidth]{figure/chap05/BSB/1m27s.eps}
+			\caption{t=63s}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.3\textwidth}{
+			\centering
+			\includegraphics[height=160pt,width=0.5\textwidth]{figure/chap05/BSB/1m35s.eps}
+			\caption{t=69s}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/BSB/a.eps}
+			\caption{幅度参数$A$随时间的变化}
+			\label{fig:bsa}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/BSB/p.eps}
+			\caption{相位参数$\varepsilon$随时间的变化}
+			\label{fig:bsp}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/BSB/w.eps}
+			\caption{角速度参数$\omega$随时间的变化}
+			\label{fig:bsw}
+		}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/BSB/v}
+			\caption{Z轴速度随时间的变化}
+			\label{fig:bsv}
+		}
+	\end{subfigure}
+	\caption{图(a)到(f)描述了蛇形机器人的攀爬过程。图(g)到(j) 是控制参数和Z轴速度在运动过程中的的变化曲线。}
+	\label{fig:BSB}
+\end{figure}
+
+
+最终，所有控制参数包括Z轴速度也是趋近于一个稳定的值。说明了我们的控制策略可以让蛇形机器人去自动调整自身的运动来适应变化的运动环境。
+
+实验证明了我们的控制策略对于机器人在直径可变杆做适应性自主运动是行之有效的。
+
 
 \section{在不同直径杆上的运动对比实验}
 
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.45\textwidth}{
+		\centering
+		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/samplifier.eps}
+		\label{fig:samplifier}
+		\caption{幅度参数$A$随时间的变化}
+	}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+		\centering
+		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/sphase.eps}
+		\label{fig:sphase}
+		\caption{相位参数$\varepsilon$随时间的变化}
+	}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+		\centering
+		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/sarate.eps}
+		\label{fig:sarate}
+		\caption{角速度参数$\omega$随时间的变化}
+	}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+		\centering
+		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/svel.eps}
+		\label{fig:svelocity}
+		\caption{Z轴速度随时间的变化}
+	}
+	\end{subfigure}
+	\caption{蛇形机器人在不同直径的杆上运动的参数及速度曲线图}
+	\label{fig:scurve}
+\end{figure}
+
 \section{算法效率}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}{0.45\textwidth}{
+		\centering
+		\includegraphics[width=1\textwidth,height=140pt]{figure/chap05/figCE.eps}
+		\label{fig:CE}
+		\caption{攀爬运动时算法的每一次计算耗时}
+	}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}{
+		\centering
+		\includegraphics[width=1\textwidth,height=140pt]{figure/chap05/TimeSpent.eps}
+		\label{fig:TS}
+		\caption{攀爬运动的耗时}
+	}
+	\end{subfigure}
+	\caption{蛇形机器人在5米高的不同直径的杆时的算法的最差，最佳以及平均计算耗时和攀爬运动总时长}
+	\label{fig:CE-TS}
+\end{figure}
+
+
 
