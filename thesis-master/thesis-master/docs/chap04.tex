@@ -102,41 +102,50 @@
 
 \section{在不同直径杆上的运动对比实验}
 
+由于现实世界中的环境是未知且复杂多变的，训练所用的环境和现实环境可能存在差异。我们训练环境为直径为25\,cm和35\,cm的直杆。为了验证我们的控制策略能够用于实际的多样化的场景，我们在直径为 20\,cm,，25\,cm， 30\,cm，35\,cm和40\,cm的杆上进行了独立的验证实验。实验结果如图\ref{fig:scurve}。
+
 \begin{figure}[htbp]
 	\centering
 	\begin{subfigure}{0.45\textwidth}{
-		\centering
-		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/samplifier.eps}
-		\label{fig:samplifier}
-		\caption{幅度参数$A$随时间的变化}
-	}
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/samplifier.eps}
+			\caption{幅度参数$A$随时间的变化}
+			\label{fig:samplifier}
+		}
 	\end{subfigure}
 	\begin{subfigure}{0.45\textwidth}{
-		\centering
-		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/sphase.eps}
-		\label{fig:sphase}
-		\caption{相位参数$\varepsilon$随时间的变化}
-	}
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/sphase.eps}
+			\caption{相位参数$\varepsilon$随时间的变化}
+			\label{fig:sphase}
+		}
 	\end{subfigure}
 	\begin{subfigure}{0.45\textwidth}{
-		\centering
-		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/sarate.eps}
-		\label{fig:sarate}
-		\caption{角速度参数$\omega$随时间的变化}
-	}
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/sarate.eps}	
+			\caption{角速度参数$\omega$随时间的变化}
+			\label{fig:sarate}
+		}
 	\end{subfigure}
 	\begin{subfigure}{0.45\textwidth}{
-		\centering
-		\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/svel.eps}
-		\label{fig:svelocity}
-		\caption{Z轴速度随时间的变化}
-	}
+			\centering
+			\includegraphics[width=1\textwidth,height=130pt]{figure/chap05/svel.eps}
+			\caption{Z轴速度随时间的变化}
+			\label{fig:svelocity}
+		}
 	\end{subfigure}
 	\caption{蛇形机器人在不同直径的杆上运动的参数及速度曲线图}
 	\label{fig:scurve}
 \end{figure}
 
+接下来对实验结果进行详细地分析。通过观察参数变化曲线，我们可以得出杆的直径越小，对于蛇形机器人来说需要更多的时间去从初始步态来调整到合适的步态，原因是初始步态是统一的。对于直径为40\,cm的杆的实验场景，由于蛇形机器人关节数的限制，无法形成一个首尾相接的环来环抱40\,cm的杆。在这种情况下，由于不需要去形成螺旋状的步态，所以相位参数$\varepsilon$的作用就会变得十分弱图\ref{fig:sphase}。因此对于直径更小的杆，例如直径为20\,cm的杆，只调整幅度参数$A$是不足以让机器人能够很好地环抱杆从而保证顺利攀爬。因此，在直径更小的杆下进行攀爬运动，蛇形机器人会不断调整相位参数$\varepsilon$配合幅度参数$A$的调整来使得步态，机器人形状很好地支撑攀爬运动（图\ref{fig:samplifier}，\ref{fig:sphase}）。实验结果表明，我们的控制策略能够帮助蛇形机器人能够在未知的直径的杆上不断调整自身步态来进行攀爬且最终都达到了一个合适且稳定的步态。
+
+在所有实验环境中，机器人的运动速度最终会围绕一个值上下波动（图\ref{fig:svelocity}）。杆的直径的变化仅仅影响速度曲线的收敛速度，即机器人达到稳定速度的耗时。机器人运动的步态控制参数最终也是会收敛达到稳定（图\ref{fig:scurve}）。这表明了外部环境的变化对控制策略的影响非常微弱。最终机器人将在其运动过程中能够不断找到最需要调整的参数并且进行计算调整。
+
+
+
 \section{算法效率}
+图\ref{fig:CE-TS}描述了我们的控制策略中算法的计算开销以及蛇形机器人在不同直径的杆上进行攀爬运动的耗时统计。
 
 \begin{figure}[htbp]
 	\centering
@@ -157,6 +166,10 @@
 	\caption{蛇形机器人在5米高的不同直径的杆时的算法的最差，最佳以及平均计算耗时和攀爬运动总时长}
 	\label{fig:CE-TS}
 \end{figure}
+
+我们可以看到，无论杆的直径如何，算法的计算耗时都是相似的，这表明我们的控制策略的算法计算开销不仅在一个可忽略的范围内，而且受环境的影响也很小。 可以观察到机器人会花费更多时间来攀爬直径较小的杆。 原因是蛇形机器人需要更多的时间将初始步态调整为合适的步态。
+
+实验结果表明，通过我们提出的控制策略可以实现蛇形机器人运动中的自适应控制。
 
 
 
