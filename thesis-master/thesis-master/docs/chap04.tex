@@ -8,15 +8,15 @@
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.9\linewidth,height=0.35\textheight]{figure/chap05/clusize.eps}
-	\caption{K-MEANS++中不同$N_{k}$取值时的簇方差}
+	\caption{$K-MEANS++$中不同$N_{k}$取值时的簇方差}
 	\label{fig:clusize}
 \end{figure}
-在数据获取阶段，我们让蛇形机器人在不同的多组参数组合下在25\,cm 和 35\,cm的杆上进行无目的性的攀爬运动，最终总共我们能收集到2万5千组的训练数据。控制参数幅度$A$，相位$\varepsilon$ 和角速度$\omega$的变化区间分别为$[40, \, 80]$，$[0, \, 5]$以及$[1.5, \, 3]$。并且， 幅度参数$A$的变化步长是5，相位参数$\varepsilon$的变化步长是1，以及角速度参数的变化步长为$\omega$ 0.5。 我们让蛇形机器人在不同参数组合下进行爬杆运动，在爬杆过程中收集相应的数据。在数据预处理阶段，我们对训练数据做一个聚类操作。我们通过算式\ref{clu_var}求出不同$N_{k}$的取值下的簇方差（如图\ref{fig:clusize}）。最终$N_{k}=25$下的K-MEANS++聚类结果如图\ref{fig:clustersize}，可以看到大多数簇的成员数量为$1000 \pm 500 $。
+在数据获取阶段，我们让蛇形机器人在不同的多组参数组合下在25\,cm 和 35\,cm的杆上进行无目的性的攀爬运动，最终总共我们能收集到2万5千组的训练数据。控制参数幅度$A$，相位$\varepsilon$ 和角速度$\omega$的变化区间分别为$[40, \, 80]$，$[0, \, 5]$以及$[1.5, \, 3]$。并且， 幅度参数$A$的变化步长是5，相位参数$\varepsilon$的变化步长是1，以及角速度参数的变化步长为$\omega$ 0.5。 我们让蛇形机器人在不同参数组合下进行爬杆运动，在爬杆过程中收集相应的数据。在数据预处理阶段，我们对训练数据做一个聚类操作。我们通过算式\ref{clu_var}求出不同$N_{k}$的取值下的簇方差（如图\ref{fig:clusize}）。最终$N_{k}=25$下的$K-MEANS++$聚类结果如图\ref{fig:clustersize}，可以看到大多数簇的成员数量为$1000 \pm 500 $。
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.6\linewidth]{figure/chap05/cluster.eps}
-	\caption{$N_{k}=25$时使用K-MEANS++聚类的结果}
+	\caption{$N_{k}=25$时使用$K-MEANS++$聚类的结果}
 	\label{fig:clustersize}
 \end{figure}
 

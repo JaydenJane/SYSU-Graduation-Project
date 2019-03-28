@@ -1,79 +1,8 @@
 \chapter{研究方法}
 \label{cha:method}
 
-\section{蛇形机器人结构}
-为了实现蛇形机器人的三维空间中的运动，Shigeo Hiorse教授的科研团队研发的ARM-R3 蛇形机器人关节间采用正交的方式相连接~\cite{Prautsch1999Control}。采用关节正交连接设计的蛇形机器人单元模块和转动副连接，最小的系统模型为三连杆模型，相邻的转动副呈现垂直的关系。最小系统模型对的关节连接模型如图\ref{fig:connect}所示，工作空间如图\ref{fig:space}所示。
-\begin{figure}[h!] % image examples & compare
-	\begin{subfigure}{0.5\textwidth}
-		\centering
-		\includegraphics[width=0.35\textwidth,height=0.15\textheight]{figure/chap03/struct.eps}
-		\caption{关节连接}
-		\label{fig:connect}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth,height=0.15\textheight]{figure/chap03/space.eps}
-		\caption{工作空间}
-		\label{fig:space}
-	\end{subfigure}
-	\caption{蛇形机器人正交连接结构}
-	\label{fig:Orthogonal}
-\end{figure}
-根据正交连接设计的蛇形机器人的实物和仿真下的建模如图\ref{fig:snakeexample}所示。
-\begin{figure}[h!] % image examples & compare
-	\begin{subfigure}{0.5\textwidth}
-		\centering
-		\includegraphics[width=0.7\textwidth,height=0.15\textheight]{figure/chap03/realSnake.eps}
-		\caption{实物蛇形机器人}
-		\label{fig:realSnake}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\centering
-		\includegraphics[width=0.7\textwidth,height=0.15\textheight]{figure/chap03/simulateSnake.eps}
-		\caption{仿真蛇形机器人}
-		\label{fig:simulateSnake}
-	\end{subfigure}
-	\caption{蛇形机器人正交连接设计示例}
-	\label{fig:snakeexample}
-\end{figure}
-
-\section{蛇形机器人步态方程}
-%\begin{wrapfigure}{r}{0.4\linewidth}
-%	\centering
-%	\includegraphics[width=0.2\textwidth]{figure/chap03/poleclimb.eps}
-%	\caption{爬杆运动}
-%	\label{fig:poleclimb}
-%\end{wrapfigure}
-如今广泛被使用的一个蛇形机器人控制策略是基于Hirose教授提出的正弦运动模型~\cite{HiroseSine}。之后Tesch教授提出了一个蛇形机器人基于正弦运动模型的三维运动参数方程~\cite{ChosetSine}。该参数方程简化了蛇形机器人的控制策略，并实现了用少量控制参数来确定机器人的运动模型。我们实验中采用的是滚动步态~\cite{Enner2013Motion}作为实验中的爬杆步态。滚动步态的正弦运动模型函数如算式\ref{basicRoll}所示：
-\begin{eqnarray}\label{basicRoll}
-T_i=\left\{
-\begin{array}{lr}
-A\cdot \sin (\omega \cdot t + i\cdot \varepsilon )&odd\\
-A\cdot \sin (\omega \cdot t + i\cdot \varepsilon +  \frac{\pi}{2})&even
-\end{array}
-\right.
-\end{eqnarray}
-\begin{figure}[h!] % image examples & compare
-	\begin{subfigure}{0.5\textwidth}
-		\centering
-		\includegraphics[width=0.5\textwidth]{figure/chap03/pipecrawl.eps}
-		\caption{管内攀爬}
-		\label{fig:pipecrawl}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\centering
-		\includegraphics[width=0.5\textwidth]{figure/chap03/poleclimb.eps}
-		\caption{管外攀爬}
-		\label{fig:poleclimb}
-	\end{subfigure}
-	\caption{蛇形机器人滚动步态的管道内外攀爬运动}
-	\label{fig:polecc}
-\end{figure}
-
-通过修改算式\ref{basicRoll}中的幅度参数$A$，相位参数$\varepsilon$和角速度参数$\omega$， 关节的最大可转动角度，机器人的螺旋化程度，蛇形机器人的运动速率会对应地发生改变。与生物蛇不同的是蛇形机器人可以表现出生物蛇无法表现的滚动步态。虽然滚动步态很简单，但是滚动步态确是十分有效的一种运动方式（图\ref{fig:poleclimb}）。 通过给予合适的参数，蛇形机器人可以通过滚动步态在地上或者管道内外等环境进行运动。
-
 \section{研究方法概述}
-本文提出的研究方法框架如所示。 我们将研究方法分为两个主要部分：离线工作算法和运行时工作算法。
+本文提出的研究方法框架如所示。 本文将研究方法分为两个主要部分：离线工作算法和运行时工作算法。
 %\begin{wrapfigure}{r}{1.0\linewidth}
 %	\centering
 %	\includegraphics[width=0.8\textwidth]{figure/chap03/step.eps}
@@ -87,12 +16,12 @@ A\cdot \sin (\omega \cdot t + i\cdot \varepsilon +  \frac{\pi}{2})&even
 	\label{fig:stepMap}
 \end{figure}
 
-在离线工作算法中，第一步，我们先定义控制参数的变化空间，让机器人在不同的参数组合的控制方程下爬杆，在爬杆过程中控制方程中的参数是不变的。当机器人爬杆时，以2秒为周期记录机器人的速度以及关节角度。之后，将所有参数组合下爬杆采集到的数据整合在一起，对整个数据使用K-MEANS++进行聚类操作~\cite{Cluseter_ICT}~\cite{KmeansAndDeepLearning}。
+在离线工作算法中，第一步，我们先定义控制参数的变化空间，让机器人在不同的参数组合的控制方程下爬杆，在爬杆过程中控制方程中的参数是不变的。当机器人爬杆时，以2秒为周期记录机器人的速度以及关节角度。最后，将在所有参数组合控制下的蛇形机器人爬杆运动中采集到的数据全部整合成一个大数据集，对整个数据集使用K-MEANS++进行聚类操作~\cite{Cluseter_ICT}~\cite{KmeansAndDeepLearning}。
 
-在运行时工作算法中，给定机器人已初始化好的控制参数，在机器人爬杆过程中，也是以2秒为周期收集机器人实时的关节角度，速度和当前控制参数的数据值，然后通过归簇操作在离线工作算法中得到的数据簇中抽取同簇的数据集合。在获取到同簇的数据集合后，通过熵方差计算衡量每个控制参数对机器人运动的影响程度，最终挑取影响程度最大的控制参数，称为最敏感控制参数。最终通过加权回归得到最敏感控制参数需要修改的新值。
+在运行时工作算法中，给定机器人已初始化好的控制参数，在机器人爬杆过程中，也是以2秒为周期收集机器人实时的关节角度，速度和当前控制参数的数据值，然后通过归簇操作在离线工作算法中得到的数据簇中抽取同簇的数据集合。在获取到同簇的数据集合后，通过熵方差计算衡量每个控制参数对机器人运动的影响程度，最终挑取影响程度最大的控制参数，即最敏感控制参数。最终通过加权回归得到最敏感控制参数的新值后代入控制方程从而改变蛇形机器人运动步态。
 
 \section{离线工作算法}
-在离线工作算法的预处理工作中，我们让机器人分别在直径为25\,cm 和 35\,cm的杆上进行大量的尝试性攀爬运动，并且在攀爬过程中收集存储数据，存储数据类型如表\,\ref{dataTable}所示。
+在离线工作算法的预处理工作中，让机器人分别在直径为25\,cm 和 35\,cm的杆上进行大量的尝试性攀爬运动，并且在攀爬过程中收集存储数据，存储数据类型如表\,\ref{dataTable}所示。
 
 \begin{table}[h]
 	\begin{center}
@@ -115,9 +44,9 @@ A\cdot \sin (\omega \cdot t + i\cdot \varepsilon +  \frac{\pi}{2})&even
 	\end{center}
 \end{table}
 
-我们定义$M=$$\frac{\sum_{i=1}^{n}\theta_{m,i}}{n}$其中，n是关节总数量。$\theta_{m}=\begin{bmatrix}\theta_{m,1} & \theta_{m,2} & \cdots & \theta_{m,n}\end{bmatrix}$是测量得到的关节角度值集合。控制参数矢量为$\begin{bmatrix}A& \omega&\varepsilon\end{bmatrix}$其中$A$是幅度， $\omega$是角速度，$\varepsilon$是矢量。具体应用可以看方程方程\ref{basicRoll}.
+我们定义$M=$$\frac{\sum_{i=1}^{n}\theta_{m,i}}{n}$其中，n是关节总数量。$\theta_{m}=\begin{bmatrix}\theta_{m,1} & \theta_{m,2} & \cdots & \theta_{m,n}\end{bmatrix}$是测量得到的关节角度值集合。控制参数矢量为$\begin{bmatrix}A& \omega&\varepsilon\end{bmatrix}$，其中$A$是幅度参数， $\omega$是角速度参数，$\varepsilon$是相位参数（方程\ref{basicRoll}）。
 
-在收集完蛇形机器人的训练数据之后，我们将两种直径杆上训练得到的数据最后进行一个合并成一个大数据集，然后对数据做聚类，目的是为了运行时工作算法时的计算性能的优化。
+在收集完蛇形机器人的训练数据之后，我们将两个不同直径的杆上训练得到的数据最后合并成一个大数据集，然后对数据做聚类，目的是为了在运行时工作算法中对计算性能进行优化。
 
 在本文中，训练过程即离线工作算法中收集到的数据是一个大数据集。由于$K-MEANS++$算法在大数据集下工作具有效率高和可拓展性的优点，因此我们采用$K-MEANS++$算法执行聚类操作。将训练集最终聚类出$N$个簇。聚类过程可以分为如下几个步骤：
 
@@ -127,7 +56,7 @@ A\cdot \sin (\omega \cdot t + i\cdot \varepsilon +  \frac{\pi}{2})&even
 	N=arg\min \limits_{N_{k}}{\frac{\sum _{N_{k}}(S_{i}-E)^{2}}{N_{k}}}
 	\end{eqnarray}
 	其中 $E = \frac{\sum _{N}(S_{i})}{N}$，$i\in [1,N]$.
-	\item 步骤 2：执行 K-MEANS++ 算法，伪代码如算法\ref{KMEANS++}所示。K-MEANS++ 是K-MEANS算法的改进版本。通过初始化函数INITILIZE，我们可以得到 $N$ 个初始化的簇心。然后， 我们迭代运行更新函数UPDATE来不断更新簇心和数据在$N$个簇中的归属直到簇心在误差范围内不再变化为止。
+	\item 步骤 2：执行 K-MEANS++ 算法，伪代码如算法\ref{KMEANS++}所示。$K-MEANS++$ 是$K-MEANS$算法的改进版本。通过初始化函数INITILIZE，我们可以得到 $N$ 个初始化的簇心。然后， 我们迭代运行更新函数UPDATE来不断更新簇心和数据在$N$个簇中的归属直到簇心在误差范围内不再变化为止。
 \end{itemize}
 
 \begin{algorithm}[h]
@@ -156,19 +85,19 @@ A\cdot \sin (\omega \cdot t + i\cdot \varepsilon +  \frac{\pi}{2})&even
 		\Return{$\mybold{X}$}
 	}
 	
-	\caption{K-MEANS++算法}
+	\caption{$K-MEANS++$算法}
 	\label{KMEANS++}
 \end{algorithm}
 
-通过使用K-MEANS++算法进行聚类，训练数据集$\mybold{P}$可以被分类成$N$个簇。聚类算法输出的数据格式为两个部分：
+通过使用$K-MEANS++$算法进行聚类，训练数据集$\mybold{P}$可以被分类成$N$个簇。聚类算法输出的数据格式为两个部分：
 \begin{enumerate}
 	\item 簇心数据集$\mybold{X}$.
-	\item 属于簇心 $X_{k},k \in [1,N]$的簇的数据$P_{i},i \in [1,\vert \mybold{P} \vert]$
+	\item 属于簇心 $X_{k}（k \in [1,N]$）的簇的数据$P_{i}（i \in [1,\vert \mybold{P} \vert]$）
 \end{enumerate}
 
 \section{运行时工作算法}
 
-在蛇形机器人实时运行进行爬杆运动时，我们将周期性地采集实时数据，然后按照执行运行时工作算法。首先，我们根据离线工作中训练得到的聚类结果对实时采集的数据做归簇操作，然后可以选取同簇中的训练数据，基于这部分数据计算熵方差，选出最敏感，对步态运动影响最大的步态参数。最后，使用回归思想，修改选定的步态参数，保持其他参数不变。
+在蛇形机器人实时运行进行爬杆运动时，将周期性地采集实时数据，然后执行运行时工作算法。首先，我们根据离线工作中训练得到的聚类结果对实时采集的数据做归簇操作，然后可以选取同簇中的训练数据，基于这部分数据计算熵方差，选出最敏感的参数，即对步态运动影响最大的步态参数。最后，使用回归分析思想，修改选定的步态参数，保持其他参数不变。
 
 \subsection{基于熵方差的参数选择}
 \subsubsection{实时数据的归簇}
