@@ -1,4 +1,4 @@
-\chapter{蛇形机器人结构和控制方法}
+\chapter{蛇形机器人结构,步态和控制方法}
 \label{cha:example}
 %\section{图像的插入}
 %\subsection{镶嵌在文中的图像}
@@ -120,20 +120,86 @@
 %	\item 索引前面的章节 \ref{sec:formula}、图像\ref{fig:complex}、表格\ref{tab:siftflow}
 %	\item 加脚注\footnote{http://cs231n.github.io/transfer-learning/}
 %\end{enumerate}
-\section{蛇形机器人结构}
-为了实现蛇形机器人的三维空间中的运动，Shigeo Hiorse教授的科研团队研发的ARM-R3 蛇形机器人关节间采用正交的方式相连接~\cite{Prautsch1999Control}。采用关节正交连接设计的蛇形机器人单元模块和转动副连接，最小的系统模型为三连杆模型，相邻的转动副呈现垂直的关系。最小系统模型对的关节连接模型如图\ref{fig:connect}所示，工作空间如图\ref{fig:space}所示。
+\section{蛇形机器人模块间的关节连接方式}
+
+\subsection{平行连接}
+早期的蛇形机器人关节模块间最常见的连接方式就是平行连接，由Shigeo Hirose研发的第一台蛇形机器人ACM III的连接方式就是平行连接\cite{Endo1999Study}（图\ref{fig:ACM}）。ACM III蛇形机器人全场2米，总共由20个索状关节以平行连接的形式构成。在平面中ACM III以蜿蜒曲线步态做运动的速度最高可达40cm/s。
+\begin{figure}[h!] % image examples & compare
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.15\textheight]{figure/chap03/ACMIII.eps}
+		\caption{ACM III 样机}
+		\label{fig:ACMIII}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.15\textheight]{figure/chap03/ACMs.eps}
+		\caption{ACM III 的局部连接和驱动装置}
+		\label{fig:ACMS}
+	\end{subfigure}
+	\caption{蛇形机器人ACM III}
+	\label{fig:ACM}
+\end{figure}
+采用平行连接连接关节的蛇形机器人的特点为：各个相邻关节的转动都是在一个平面内的，且转动副轴线相互平行且垂直于蛇体的纵轴。对应的最小构成单位为两连杆铰接模型（图\ref{fig:parconnect}），工作空间如图\ref{fig:parspace}所示。
+\begin{figure}[h!] % image examples & compare
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.15\textheight]{figure/chap03/parellelmod.eps}
+		\caption{关节连接}
+		\label{fig:parconnect}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.15\textheight]{figure/chap03/parallelspace.eps}
+		\caption{工作空间}
+		\label{fig:parspace}
+	\end{subfigure}
+	\caption{蛇形机器人平行连接结构}
+	\label{fig:parallel}
+\end{figure}
+
+\subsection{万向连接}
+采用万向连接的蛇形机器人的连杆模型的特点为：灵活度高，运动形式多样化。其万向连接的连杆模型为蛇形机器人在三维空间中做灵活，复杂，多样的运动提供了基础。
+\begin{wrapfigure}{r}{0.5\linewidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{figure/chap03/scut.eps}
+	\caption{华南理工Snakerobot-scut-v5}
+	\label{fig:scut}
+\end{wrapfigure}图\ref{fig:scut}是由华南理工大学研制的第三代蛇形机器人样机Snakerobot-scut-v5\footnote{http://robotscut.co}。其头部关节采用的是独立的万向关节连接设计，通过在头部安装摄像头和重力感应器后通过特定的算法控制使得蛇形机器人在运动中能够维持头部关节的稳定，通过稳定的蛇形头采集图像，可用于桥梁缆索系统的检测或远程图像的检测提取工作。
+
+基于这种连接的最小单位连接模型为两连杆铰接模型，其连接模型和工作空间如图\ref{fig:all}。
+\begin{figure}[h!] % image examples & compare
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.15\textheight]{figure/chap03/allconnect.eps}
+		\caption{关节连接}
+		\label{fig:allconnect}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.15\textheight]{figure/chap03/allspace.eps}
+		\caption{工作空间}
+		\label{fig:allspace}
+	\end{subfigure}
+	\caption{蛇形机器人万向连接结构}
+	\label{fig:all}
+\end{figure}
+
+
+\subsection{正交连接}
+为了实现蛇形机器人的三维空间中的运动，Shigeo Hiorse教授的科研团队研发的ARM-R3 蛇形机器人关节间采用正交的方式相连接~\cite{Prautsch1999Control}。采用正交连接的蛇形机器人突破了二维空间运动的桎梏，身体能够进行侧行，翻滚，还能实现内外攀爬的高难度步态。采用关节正交连接设计的蛇形机器人的单元模块和其转动副连接，最小的系统模型为三连杆模型，相邻的转动副呈现垂直的关系。最小系统模型对的关节连接模型如图\ref{fig:orconnect}所示，工作空间如图\ref{fig:orspace}所示。
 \begin{figure}[h!] % image examples & compare
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.35\textwidth,height=0.15\textheight]{figure/chap03/struct.eps}
 		\caption{关节连接}
-		\label{fig:connect}
+		\label{fig:orconnect}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth,height=0.15\textheight]{figure/chap03/space.eps}
 		\caption{工作空间}
-		\label{fig:space}
+		\label{fig:orspace}
 	\end{subfigure}
 	\caption{蛇形机器人正交连接结构}
 	\label{fig:Orthogonal}
@@ -156,14 +222,29 @@
 	\label{fig:snakeexample}
 \end{figure}
 
-\section{蛇形机器人步态方程}
-%\begin{wrapfigure}{r}{0.4\linewidth}
-%	\centering
-%	\includegraphics[width=0.2\textwidth]{figure/chap03/poleclimb.eps}
-%	\caption{爬杆运动}
-%	\label{fig:poleclimb}
-%\end{wrapfigure}
-如今广泛被使用的一个蛇形机器人控制策略是基于Hirose教授提出的正弦运动模型~\cite{HiroseSine}。之后Tesch教授提出了一个蛇形机器人基于正弦运动模型的三维运动参数方程~\cite{ChosetSine}。该参数方程简化了蛇形机器人的控制策略，并实现了用少量控制参数来确定机器人的运动模型。我们实验中采用的是滚动步态~\cite{Enner2013Motion}作为实验中的爬杆步态。滚动步态的正弦运动模型函数如算式\ref{basicRoll}所示：
+
+\section{蛇形机器人步态}
+如今广泛被使用的一个蛇形机器人控制策略是基于Hirose教授提出的正弦运动模型~\cite{HiroseSine}，也就是Serpenoid曲线模型，这种运动曲线能够让电机的力矩和摩擦力减小，作为蛇形机器人的运动曲线取得了良好的控制效果，Serpenoid曲线模型如式(\ref{serpenoid})。
+\begin{eqnarray}\label{serpenoid}
+\left\{
+\begin{array}{lr}
+x(s)=\int_{0}^{s}\cos \tau d\sigma \\
+y(s)=\int_{0}^{s}\sin \tau d\sigma \\
+\tau =a\cos(b\sigma )+c\sigma
+\end{array}
+\right.
+\end{eqnarray}
+
+式(\ref{serpenoid})中的a，b，c都是Serpenoid曲线的参数。通过对这几个参数进行修改可以得到不同类型的Serpenoid曲线。$\tau$是波形位置，其改变的速率能够表示曲线运动的速率。$a$，$b$，$c$分别指定了曲线的波动大小，周期以及角速度。由于蛇形机器人的关节模块是独立的刚体，因此通过对曲线公式离散化从而应用到多连杆蛇形机器人的控制中，用蛇形机器人的每个关节去模拟曲线，从而得到每个关节的旋转角度。Serpenoid曲线经过离散化化简之后，各个关节在t时刻的相对的旋转角度即关节角由以下公式给出：
+\begin{eqnarray}\label{angledegree}
+\phi _{i}(t)=\alpha \sin(\omega t+(i-1)\beta )+\gamma &(i=1,2,...,n-1)
+\end{eqnarray}
+
+其中$\alpha$，$\beta$和$\gamma$三个参数决定了蛇形机器人Serpenoid曲线的形状，即运动的步态。$\omega$决定了Serpenoid曲线的传播速率即蛇形机器人运动的速率。
+
+
+\section{正交设计的蛇形机器人的滚动攀爬步态}
+在Hirose教授提出的Serpenoid曲线模型之后，Tesch教授提出了一个蛇形机器人基于正弦运动模型的三维运动参数方程~\cite{ChosetSine}。该参数方程简化了蛇形机器人的控制策略，并实现了用少量控制参数来确定机器人的运动模型。我们实验中采用的是滚动步态~\cite{Enner2013Motion}作为实验中的爬杆步态。滚动步态的正弦运动模型函数如式(\ref{basicRoll})所示：
 \begin{eqnarray}\label{basicRoll}
 T_i=\left\{
 \begin{array}{lr}
@@ -172,7 +253,7 @@ A\cdot \sin (\omega \cdot t + i\cdot \varepsilon +  \frac{\pi}{2})&even
 \end{array}
 \right.
 \end{eqnarray}
-\begin{figure}[h!] % image examples & compare
+\begin{figure}[htbp] % image examples & compare
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=0.5\textwidth]{figure/chap03/pipecrawl.eps}

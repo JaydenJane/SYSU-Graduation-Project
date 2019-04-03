@@ -16,7 +16,7 @@
 	\label{fig:stepMap}
 \end{figure}
 
-在离线工作算法中，第一步，我们先定义控制参数的变化空间，让机器人在不同的参数组合的控制方程下爬杆，在爬杆过程中控制方程中的参数是不变的。当机器人爬杆时，以2秒为周期记录机器人的速度以及关节角度。最后，将在所有参数组合控制下的蛇形机器人爬杆运动中采集到的数据全部整合成一个大数据集，对整个数据集使用K-MEANS++进行聚类操作~\cite{Cluseter_ICT}~\cite{KmeansAndDeepLearning}。
+在离线工作算法中，第一步，先定义控制参数的变化空间，让机器人在不同的参数组合的控制方程下爬杆，在爬杆过程中控制方程中的参数是不变的。当机器人爬杆时，以2秒为周期记录机器人的速度以及关节角度。最后，将在所有参数组合控制下的蛇形机器人爬杆运动中采集到的数据全部整合成一个大数据集，对整个数据集使用K-MEANS++进行聚类操作~\cite{Cluseter_ICT}~\cite{KmeansAndDeepLearning}。
 
 在运行时工作算法中，给定机器人已初始化好的控制参数，在机器人爬杆过程中，也是以2秒为周期收集机器人实时的关节角度，速度和当前控制参数的数据值，然后通过归簇操作在离线工作算法中得到的数据簇中抽取同簇的数据集合。在获取到同簇的数据集合后，通过熵方差计算衡量每个控制参数对机器人运动的影响程度，最终挑取影响程度最大的控制参数，即最敏感控制参数。最终通过加权回归得到最敏感控制参数的新值后代入控制方程从而改变蛇形机器人运动步态。
 
@@ -44,9 +44,9 @@
 	\end{center}
 \end{table}
 
-我们定义$M=$$\frac{\sum_{i=1}^{n}\theta_{m,i}}{n}$其中，n是关节总数量。$\theta_{m}=\begin{bmatrix}\theta_{m,1} & \theta_{m,2} & \cdots & \theta_{m,n}\end{bmatrix}$是测量得到的关节角度值集合。控制参数矢量为$\begin{bmatrix}A& \omega&\varepsilon\end{bmatrix}$，其中$A$是幅度参数， $\omega$是角速度参数，$\varepsilon$是相位参数（方程\ref{basicRoll}）。
+我们定义$M=$$\frac{\sum_{i=1}^{n}\theta_{m,i}}{n}$其中，n是关节总数量。$\theta_{m}=\begin{bmatrix}\theta_{m,1} & \theta_{m,2} & \cdots & \theta_{m,n}\end{bmatrix}$是测量得到的关节角度值集合。控制参数矢量为$\begin{bmatrix}A& \omega&\varepsilon\end{bmatrix}$，其中$A$是幅度参数， $\omega$是角速度参数，$\varepsilon$是相位参数（式(\ref{basicRoll})）。
 
-在收集完蛇形机器人的训练数据之后，我们将两个不同直径的杆上训练得到的数据最后合并成一个大数据集，然后对数据做聚类，目的是为了在运行时工作算法中对计算性能进行优化。
+在收集完蛇形机器人的训练数据之后，我们将蛇形机器人在两个不同直径的杆上训练得到的数据合并成一个大数据集，然后对数据做聚类，目的是为了在运行时工作算法中对计算性能进行优化。
 
 在本文中，训练过程即离线工作算法中收集到的数据是一个大数据集。由于$K-MEANS++$算法在大数据集下工作具有效率高和可拓展性的优点，因此我们采用$K-MEANS++$算法执行聚类操作。将训练集最终聚类出$N$个簇。聚类过程可以分为如下几个步骤：
 
@@ -92,7 +92,7 @@
 通过使用$K-MEANS++$算法进行聚类，训练数据集$\mybold{P}$可以被分类成$N$个簇。聚类算法输出的数据格式为两个部分：
 \begin{enumerate}
 	\item 簇心数据集$\mybold{X}$.
-	\item 属于簇心 $X_{k}（k \in [1,N]$）的簇的数据$P_{i}（i \in [1,\vert \mybold{P} \vert]$）
+	\item 属于簇心 $X_{k}(k \in [1,N]$)的簇的数据$P_{i}(i \in [1,\vert \mybold{P} \vert]$)
 \end{enumerate}
 
 \section{运行时工作算法}
@@ -101,7 +101,7 @@
 
 \subsection{基于熵方差的参数选择}
 \subsubsection{实时数据的归簇}
-每当我们采集到一组实时数据，我们都会通过算式\ref{cluster}将其归簇到某个数据簇中。
+每当我们采集到一组实时数据，我们都会通过式(\ref{cluster})将其归簇到某个数据簇中。
 
 \begin{eqnarray}\label{cluster}
 C=arg\min \limits_{k}{(||X_{k}-P_{t}||_{2})} \, ,&X_{C}\in \bm{X}
@@ -110,7 +110,7 @@ C=arg\min \limits_{k}{(||X_{k}-P_{t}||_{2})} \, ,&X_{C}\in \bm{X}
 $\mybold{X}$是簇心数据矢量集（算法\ref{KMEANS++}）。$X_{C}$是离实时数据矢量$P_t$的欧几里得距离最近的簇心矢量。$X_{k}$是簇心数据矢量集$\mybold{X}$的第$k$个簇心。通过欧几里得距离算法，我们可以计算两个数据矢量之间的相似度。
 
 \subsubsection{优势数据的选择}
-在对实时数据进行归簇之后，我们在簇中选择Z轴速度比当前测量数据中的大的数据矢量（算式\ref{preponderant}）。
+在对实时数据进行归簇之后，我们在簇中选择Z轴速度比当前测量数据中的大的数据矢量（(式(\ref{preponderant})）。
 \begin{eqnarray}\label{preponderant}
 \bm{P_{\upsilon}}=\{P_{i} | \upsilon_{z,i}\geq \upsilon_{z,P_{t}} \; , \; P_{i}\in \bm{P_{C}}\}
 \end{eqnarray}
@@ -120,26 +120,26 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 我们采用熵方差作为参考指标来选择应该修改的控制参数。 选择最敏感参数的步骤如下：
 
 \begin{itemize}
-	\item 步骤一： 对数据做离散化预处理操作，目的是为了更好的分离数据(算式\ref{quantification})。
+	\item 步骤一： 对数据做离散化预处理操作，目的是为了更好的分离数据(式(\ref{quantification}))以引入熵的概念对数据做分析。
 	%quantification
 	\begin{eqnarray}\label{quantification}
 	\upsilon_{new,i}=\left\{
 	\begin{array}{lr}
-	\left \lfloor \frac{\upsilon_{z,i}}{L_{D}} \right \rfloor&\upsilon_{z,i}> 0\\
+	\frac{\upsilon_{z,i}}{L_{D}} &\upsilon_{z,i}> 0\\
 	\\
-	\left \lceil \frac{\upsilon_{z,i}-L_{D}}{L_{D}} \right \rceil&\upsilon_{z,i}\leq 0
+	\frac{\upsilon_{z,i}-L_{D}}{L_{D}} &\upsilon_{z,i}\leq 0
 	\end{array}
 	\right.
 	\end{eqnarray}
 	
-	在算式\ref{quantification}中， $L_{D}$离散化操作中的步长（可调节）. 最终我们得到的速度离散化序列为:
+	在式(\ref{quantification})中， $\upsilon_{z,i}$代表的是原始数据中Z轴速度的值，$\upsilon_{new,i}$表示的是原始数据中Z轴速度离散化之后的Z轴速度的值。$L_{D}$离散化操作中的步长（可调节）. 最终我们得到的速度离散化序列为:
 	\begin{eqnarray}\label{newMember}
 	V_{new}=\begin{bmatrix}
 	\upsilon_{new,1} & \upsilon_{new,2} & \upsilon_{new,3} & \upsilon_{new,4} & \cdots & \cdots
 	\end{bmatrix}
 	\end{eqnarray}
 	
-	\item 步骤二：因为对于每一个步态参数都有多种可能的取值。因此我们用集合$S_{i,j}$来表示控制参数矢量，代表的是控制参数$i$的第$j$可能的取值。$i$的值是0，1，2分别代表了 $A$, $\omega$和$\varepsilon$。我们通过算式\ref{entropy}计算当参数$i$的值是其第$j$个可能取值时候的熵值，同时通过算式\ref{var_entropy}去计算步态参数$i$的熵方差。在算式\ref{entropy}中，$p(\upsilon_{new,k})$是步态参数$i$的第$j$个取值时Z轴离散化速度为$\upsilon_{new,k}$的比率。在算式\ref{var_entropy}中，$E_{i,j}$当步态参数$i$的值是其第$j$个可能取值时的速度的均值，以及$N_{i}$步态参数$i$的可能取值的数量。
+	\item 步骤二：因为对于每一个步态参数都有多种可能的取值。因此我们用集合$S_{i,j}$来表示控制参数矢量，$i$的值是0，1，2分别代表了 $A$, $\omega$和$\varepsilon$，$S_{i,j}$代表的是控制参数$i$在这一个数据集中第$j$可能的取值。我们通过式(\ref{entropy})计算当参数$i$的值是其第$j$个可能取值时候的熵值，同时通过式(\ref{var_entropy})去计算步态参数$i$的熵方差。在式(\ref{entropy})中，$p(\upsilon_{new,k})$是控制参数$i$的值为其在这个数据集中第$j$个取值的所有情况中，Z轴速度的离散化速度等于$\upsilon_{new,k}$的占比比例。在式(\ref{var_entropy})中，$E^{(H)}_{i,j}$为当控制参数$i$的值等于其在当前数据集中第$j$个可能取值的所有情况的速度熵的均值，以及$N_{i}$为控制参数$i$的可能取值的数量。
 	%entropy
 	\begin{eqnarray}\label{entropy}
 	H(S_{i,j})=-\sum _{\upsilon_{new,k}\in V_{new}}p(\upsilon_{new,k})log_{2}p(\upsilon_{new,k})
@@ -147,10 +147,10 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	
 	%entropy variance
 	\begin{eqnarray}\label{var_entropy}
-	Var_{i}=\frac{\sum _{N_{i}}(H(S_{i,j})-E_{i,j})^{2}}{N_{i}}
+	Var_{i}=\frac{\sum _{N_{i}}(H(S_{i,j})-E^{(H)}_{i,j})^{2}}{N_{i}}
 	\end{eqnarray}
 	
-	\item 步骤三：对熵方差进行归一化(算式\ref{normalize})，然后通过轮盘赌选择算法随机挑选最敏感参数。
+	\item 步骤三：对熵方差进行归一化(式(\ref{normalize}))，然后通过轮盘赌选择算法随机挑选最敏感参数。
 	%normalize entropy variance
 	\begin{eqnarray}\label{normalize}
 	R_{Var_{i}}=\frac{Var_{i}}{\sum Var_{i}}
@@ -164,19 +164,19 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	%\end{figure}
 \end{itemize}
 
-通过计算熵方差选择最敏感参数，然后通过回归方法去修改最敏感参数的值从而改变蛇形机器人运动步态实现环境的适应性运动。
+通过计算熵方差选择最敏感参数，然后通过回归分析去得出最敏感参数的新值从而通过修改控制参数改变蛇形机器人运动步态实现环境的适应性运动。
 
 \subsection{最敏感参数值的赋值}
-在本文中，我们采用加权回归得到需要修改的最敏感步态参数的值，其中使用了梯度下降法求解拟合回归函数中的加权最小二乘问题。
+在本文中，我们采用加权回归分析方法计算需要修改的最敏感步态参数的值，其中使用了梯度下降法求解拟合回归函数中的加权最小二乘问题。
 
 \begin{itemize}
-	\item 步骤一：列出拟合估计函数(算式\ref{fitfunction})
+	\item 步骤一：列出拟合估计函数(式(\ref{fitfunction}))
 	%fitting and estimation function
 	\begin{eqnarray}\label{fitfunction}
 	F_{w}(P_{t})=W^{T}P_{t}\,,&W=\begin{bmatrix}w_{1}\\ w_{2}\\ \vdots \\ w_{m}\end{bmatrix}
 	\end{eqnarray}
 	
-	在算式\ref{fitfunction}中， $W$是拟合函数的系数矢量，$m$是系数的个数。$P_{t}$ 是实时采集到的数据矢量。然后我们可以得到误差函数(算式\ref{estimate}) ，误差函数采用平方和误差，$n$是矢量$\bm{P_{\upsilon}}$中的数据数量（即$\bm{P_{\upsilon}}$的维度-控制参数的数量）。$\bm{Q}$是 $P_{i}$中的最敏感参数的数据矢量。
+	在式(\ref{fitfunction})中， $W$是拟合函数的系数矢量，$m$是系数的个数。$P_{t}$ 是实时采集到的蛇形机器人的关节角度，速度和控制参数的实时值的数据矢量。然后我们可以得到误差函数(式(\ref{estimate})) ，误差函数采用平方和误差，$n$是矢量$\bm{P_{\upsilon}}$中的数据数量（即$\bm{P_{\upsilon}}$的维度减去控制参数的数量）。$\bm{Q}$是 $P_{i}$中的最敏感参数的数据矢量。
 	%Square sum as an estimation
 	\begin{eqnarray}\label{estimate}
 	D(W)=\frac{1}{2n}(F_{w}(\bm{P_{\upsilon}})^{T}-\bm{Q})^{T}(F_{w}(\bm{P_{\upsilon}})^{T}-\bm{Q})
@@ -188,15 +188,15 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	\bm{Q}=\begin{bmatrix}Q_{\upsilon,1}& Q_{\upsilon,2}& \cdots & Q_{\upsilon,n}\end{bmatrix}^{T}
 	\end{eqnarray}
 	
-	通过使误差函数$D(w)$最小化来得到拟合度最好的系数序列$W$，根据梯度下降算法原理，我们通过算式\ref{estimate}求导得到了算式\ref{Gradde}。
+	通过使误差函数$D(w)$最小化来得到拟合度最好的系数序列$W$，根据梯度下降算法原理，我们通过式(\ref{estimate})求导得到了式(\ref{Gradde})。
 	%Gradient descent
 	\begin{eqnarray}\label{Gradde}
 	\nabla_{w}D=\frac{1}{n}\bm{P_{\upsilon}}(F_{w}(\bm{P_{\upsilon}})^{T}-\bm{Q})
 	\end{eqnarray}
 	
-	\item 步骤二： 为了保证优势数据矢量拟合，对优势数据矢量根据加速度采取加权操作(算式\ref{WeiGradde})。
+	\item 步骤二： 为了保证优势数据矢量拟合，对优势数据矢量矩阵$\bm{P_{\upsilon}}$根据其对应的速度采取加权操作(式(\ref{WEI}，\ref{WeiGradde}))。
 	%weighted gradient
-	\begin{eqnarray}
+	\begin{eqnarray}\label{WEI}
 	\nabla_{w}D=\frac{1}{n}\bm{P_{\upsilon}}M(F_{w}(\bm{P_{\upsilon}})^{T}-\bm{Q})
 	\end{eqnarray}
 	\begin{eqnarray}\label{WeiGradde}
@@ -204,12 +204,12 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	\frac{\upsilon_{z,1}}{L_{s}}&0&\cdots&0\\
 	0&\frac{\upsilon_{z,2}}{L_{s}}&\ddots&0\\
 	\vdots&\ddots&\ddots&0\\
-	0&\cdots&0&\frac{\upsilon_{z,3}}{L_{s}}
+	0&\cdots&0&\frac{\upsilon_{z,n}}{L_{s}}
 	\end{bmatrix}
 	\end{eqnarray}
-	在算式\ref{WeiGradde}中，$L_s$是可变学习步长，$M$是学习率矩阵。
+	在式(\ref{WeiGradde})中，$L_s$是可变学习步长，$M$是学习率矩阵。
 	
-	\item 步骤三：拟合参数向量（算式\ref{fit}）。
+	\item 步骤三：拟合系数矢量$W$（式(\ref{fit})）。
 	%fitting the parameters
 	\begin{eqnarray}\label{fit}
 	W=W-\nabla_{w}D
@@ -219,7 +219,7 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	\item 步骤四：不断迭代以上步骤直到我们获取最拟合的系数向量。$W$的值最终趋于稳定状态。
 \end{itemize}
 
-迭代终止的时候，可以得到最优拟合系数向量$W_{best}$。通过将$W_{best}$代入算式\ref{result}，我们可以求解的最敏感参数的回归结果。最终将结果用于步态的控制中，对于其他参数我们保留其原来的值，只修改最敏感参数的值。
+迭代终止的时候，可以得到最优拟合系数向量$W_{best}$。通过将$W_{best}$代入式(\ref{result})，我们可以求解得到最敏感参数的回归结果。最终将结果用于步态的控制中，对于其他参数我们保留其原来的值，只修改最敏感参数的值。
 %compensation result
 \begin{eqnarray}\label{result}
 Q_{t} = F_{w}(P_{t})=W^{T}P_{t}
