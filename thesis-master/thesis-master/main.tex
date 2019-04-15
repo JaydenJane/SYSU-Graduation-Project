@@ -21,7 +21,7 @@
         \makedisclaim       % 学术诚信声明
         \makeabstract       % 中英文摘要
         \maketableofcontents        % 目录
-        \makelistoffiguretable
+        %\makelistoffiguretable
 
     % 论文主体部分
     \mainmatter
@@ -44,9 +44,9 @@
     \backmatter
         % 参考文献. 因不需要纳入章节目录, 故放入附录部分
         % 实际上参考文献是属于论文主体部分
-		%\makereferences
-        \bibliographystyle{unsrt}
-        \bibliography{main}
+		\makereferences
+        %\bibliographystyle{unsrt}
+        %\bibliography{main}
 
         \include{docs/ack}    % 致谢
         \newclearpage

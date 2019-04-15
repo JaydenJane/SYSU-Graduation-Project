@@ -2,7 +2,7 @@
 \label{cha:method}
 
 \section{研究方法概述}
-本文提出的研究方法框架如所示。 本文将研究方法分为两个主要部分：离线工作算法和运行时工作算法。
+本文提出的研究方法分为两个主要部分：离线工作算法和运行时工作算法（如图\ref{fig:stepMap}）。
 %\begin{wrapfigure}{r}{1.0\linewidth}
 %	\centering
 %	\includegraphics[width=0.8\textwidth]{figure/chap03/step.eps}
@@ -16,9 +16,9 @@
 	\label{fig:stepMap}
 \end{figure}
 
-在离线工作算法中，第一步，先定义控制参数的变化空间，让机器人在不同的参数组合的控制方程下爬杆，在爬杆过程中控制方程中的参数是不变的。当机器人爬杆时，以2秒为周期记录机器人的速度以及关节角度。最后，将在所有参数组合控制下的蛇形机器人爬杆运动中采集到的数据全部整合成一个大数据集，对整个数据集使用K-MEANS++进行聚类操作~\cite{Cluseter_ICT}~\cite{KmeansAndDeepLearning}。
+在离线工作算法中，第一步，先定义控制参数的变化空间，让机器人在不同的参数组合的控制方程下爬杆，在爬杆过程中控制方程中的参数是不变的。当机器人爬杆时，以2秒为周期记录机器人的速度以及关节角度。最后，将在所有参数组合控制下的蛇形机器人爬杆运动中采集到的数据全部整合成一个大数据集，然后对整个数据集采取K-MEANS++算法实现聚类~\cite{Cluseter_ICT}~\cite{KmeansAndDeepLearning}。
 
-在运行时工作算法中，给定机器人已初始化好的控制参数，在机器人爬杆过程中，也是以2秒为周期收集机器人实时的关节角度，速度和当前控制参数的数据值，然后通过归簇操作在离线工作算法中得到的数据簇中抽取同簇的数据集合。在获取到同簇的数据集合后，通过熵方差计算衡量每个控制参数对机器人运动的影响程度，最终挑取影响程度最大的控制参数，即最敏感控制参数。最终通过加权回归得到最敏感控制参数的新值后代入控制方程从而改变蛇形机器人运动步态。
+在运行时工作算法中，首先给定机器人已初始化好的控制参数。在机器人爬杆过程中，以2秒为周期收集机器人实时的关节角度，速度和当前控制参数的数据值，然后通过归簇操作在离线工作算法中得到的数据簇中抽取同簇的数据集合。在获取到同簇的数据集合后，通过熵方差计算衡量每个控制参数对机器人运动的影响程度，最终挑取影响程度最大的控制参数，即最敏感控制参数。最终通过加权回归得到最敏感控制参数的新值后代入控制方程从而改变蛇形机器人运动步态。
 
 \section{离线工作算法}
 在离线工作算法的预处理工作中，让机器人分别在直径为25\,cm 和 35\,cm的杆上进行大量的尝试性攀爬运动，并且在攀爬过程中收集存储数据，存储数据类型如表\,\ref{dataTable}所示。
@@ -48,15 +48,15 @@
 
 在收集完蛇形机器人的训练数据之后，我们将蛇形机器人在两个不同直径的杆上训练得到的数据合并成一个大数据集，然后对数据做聚类，目的是为了在运行时工作算法中对计算性能进行优化。
 
-在本文中，训练过程即离线工作算法中收集到的数据是一个大数据集。由于$K-MEANS++$算法在大数据集下工作具有效率高和可拓展性的优点，因此我们采用$K-MEANS++$算法执行聚类操作。将训练集最终聚类出$N$个簇。聚类过程可以分为如下几个步骤：
+在本文中，训练过程即离线工作算法中收集到的数据是一个大数据集。由于K-MEANS++算法在大数据集下工作具有效率高和可拓展性的优点，因此我们采用K-MEANS++算法执行聚类操作。将训练集最终聚类出$N$个簇。聚类过程可以分为如下几个步骤：
 
 \begin{itemize}
 	\item 步骤 1：通过方程\ref{clu_var}确定 $N$ 的值。
 	\begin{eqnarray}\label{clu_var}
 	N=arg\min \limits_{N_{k}}{\frac{\sum _{N_{k}}(S_{i}-E)^{2}}{N_{k}}}
 	\end{eqnarray}
-	其中 $E = \frac{\sum _{N}(S_{i})}{N}$，$i\in [1,N]$.
-	\item 步骤 2：执行 K-MEANS++ 算法，伪代码如算法\ref{KMEANS++}所示。$K-MEANS++$ 是$K-MEANS$算法的改进版本。通过初始化函数INITILIZE，我们可以得到 $N$ 个初始化的簇心。然后， 我们迭代运行更新函数UPDATE来不断更新簇心和数据在$N$个簇中的归属直到簇心在误差范围内不再变化为止。
+	其中 $E = \frac{\sum _{N}(S_{i})}{N_{k}}$，$i\in [1,N_{k}]$。$S_{i}$是每个簇中成员数据到簇心的距离的均值。
+	\item 步骤 2：执行 K-MEANS++ 算法，伪代码如算法\ref{KMEANS++}所示。K-MEANS++ 是K-MEANS算法的改进版本。通过初始化函数INITILIZE，我们可以得到 $N$ 个初始化的簇心。然后， 我们迭代运行更新函数UPDATE来不断更新簇心和数据在$N$个簇中的归属直到簇心在误差范围内不再变化为止。
 \end{itemize}
 
 \begin{algorithm}[h]
@@ -85,11 +85,11 @@
 		\Return{$\mybold{X}$}
 	}
 	
-	\caption{$K-MEANS++$算法}
+	\caption{K-MEANS++算法}
 	\label{KMEANS++}
 \end{algorithm}
 
-通过使用$K-MEANS++$算法进行聚类，训练数据集$\mybold{P}$可以被分类成$N$个簇。聚类算法输出的数据格式为两个部分：
+通过使用K-MEANS++算法对训练数据集$\mybold{P}$进行聚类，$\mybold{P}$可以被分类成$N$个簇。聚类算法输出的数据格式为两个部分：
 \begin{enumerate}
 	\item 簇心数据集$\mybold{X}$.
 	\item 属于簇心 $X_{k}(k \in [1,N]$)的簇的数据$P_{i}(i \in [1,\vert \mybold{P} \vert]$)
@@ -114,7 +114,7 @@ $\mybold{X}$是簇心数据矢量集（算法\ref{KMEANS++}）。$X_{C}$是离�
 \begin{eqnarray}\label{preponderant}
 \bm{P_{\upsilon}}=\{P_{i} | \upsilon_{z,i}\geq \upsilon_{z,P_{t}} \; , \; P_{i}\in \bm{P_{C}}\}
 \end{eqnarray}
-$\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_{z,i}$是$P_{i}$的Z轴速度分量的值。$\upsilon_{z,P_{t}}$是实时数据矢量的Z轴速度分量的值。$\bm{P_{\upsilon}}$是所有用于回归的优势数据的数据矢量集合。
+$\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量，$\upsilon_{z,i}$是$P_{i}$的Z轴速度分量的值，$\upsilon_{z,P_{t}}$是实时数据矢量的Z轴速度分量的值，$\bm{P_{\upsilon}}$是所有用于回归的优势数据的数据矢量集合。
 
 \subsubsection{最敏感参数的选取}
 我们采用熵方差作为参考指标来选择应该修改的控制参数。 选择最敏感参数的步骤如下：
@@ -132,14 +132,14 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	\right.
 	\end{eqnarray}
 	
-	在式(\ref{quantification})中， $\upsilon_{z,i}$代表的是原始数据中Z轴速度的值，$\upsilon_{new,i}$表示的是原始数据中Z轴速度离散化之后的Z轴速度的值。$L_{D}$离散化操作中的步长（可调节）. 最终我们得到的速度离散化序列为:
+	在式(\ref{quantification})中， $\upsilon_{z,i}$代表的是原始训练数据中第i项数据的Z轴速度的值，$\upsilon_{new,i}$表示的是原始数据中Z轴速度离散化之后的Z轴速度的值。$L_{D}$离散化操作中的步长（可调节）. 最终我们得到的速度离散化序列为:
 	\begin{eqnarray}\label{newMember}
 	V_{new}=\begin{bmatrix}
 	\upsilon_{new,1} & \upsilon_{new,2} & \upsilon_{new,3} & \upsilon_{new,4} & \cdots & \cdots
 	\end{bmatrix}
 	\end{eqnarray}
 	
-	\item 步骤二：因为对于每一个步态参数都有多种可能的取值。因此我们用集合$S_{i,j}$来表示控制参数矢量，$i$的值是0，1，2分别代表了 $A$, $\omega$和$\varepsilon$，$S_{i,j}$代表的是控制参数$i$在这一个数据集中第$j$可能的取值。我们通过式(\ref{entropy})计算当参数$i$的值是其第$j$个可能取值时候的熵值，同时通过式(\ref{var_entropy})去计算步态参数$i$的熵方差。在式(\ref{entropy})中，$p(\upsilon_{new,k})$是控制参数$i$的值为其在这个数据集中第$j$个取值的所有情况中，Z轴速度的离散化速度等于$\upsilon_{new,k}$的占比比例。在式(\ref{var_entropy})中，$E^{(H)}_{i,j}$为当控制参数$i$的值等于其在当前数据集中第$j$个可能取值的所有情况的速度熵的均值，以及$N_{i}$为控制参数$i$的可能取值的数量。
+	\item 步骤二：因为对于每一个步态参数都有多种可能的取值。因此我们用集合$S_{i,j}$来表示控制参数矢量，$i$的值是0，1，2分别代表了 $A$, $\omega$和$\varepsilon$，$S_{i,j}$代表的是控制参数$i$在这一个数据集中第$j$可能的取值。我们通过式(\ref{entropy})计算当参数$i$的值是其第$j$个可能取值时候的熵值，同时通过式(\ref{var_entropy})去计算步态参数$i$的熵方差。在式(\ref{entropy})中，$p(\upsilon_{new,k})$是控制参数$i$的值等于其在这个数据集中第$j$个取值的所有情况中，Z轴速度的离散化速度等于$\upsilon_{new,k}$的占比比例。在式(\ref{var_entropy})中，$E^{(H)}_{i}$为控制参数$i$的所有取值情况下的速度熵的均值，以及$N_{i}$为控制参数$i$的所有可能取值的数量。
 	%entropy
 	\begin{eqnarray}\label{entropy}
 	H(S_{i,j})=-\sum _{\upsilon_{new,k}\in V_{new}}p(\upsilon_{new,k})log_{2}p(\upsilon_{new,k})
@@ -147,7 +147,7 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	
 	%entropy variance
 	\begin{eqnarray}\label{var_entropy}
-	Var_{i}=\frac{\sum _{N_{i}}(H(S_{i,j})-E^{(H)}_{i,j})^{2}}{N_{i}}
+	Var_{i}=\frac{\sum _{N_{i}}(H(S_{i,j})-E^{(H)}_{i})^{2}}{N_{i}}
 	\end{eqnarray}
 	
 	\item 步骤三：对熵方差进行归一化(式(\ref{normalize}))，然后通过轮盘赌选择算法随机挑选最敏感参数。
@@ -194,7 +194,7 @@ $\bm{P_{C}}$是属于簇心为$X_{C}$的簇中的所有数据矢量。$\upsilon_
 	\nabla_{w}D=\frac{1}{n}\bm{P_{\upsilon}}(F_{w}(\bm{P_{\upsilon}})^{T}-\bm{Q})
 	\end{eqnarray}
 	
-	\item 步骤二： 为了保证优势数据矢量拟合，对优势数据矢量矩阵$\bm{P_{\upsilon}}$根据其对应的速度采取加权操作(式(\ref{WEI}，\ref{WeiGradde}))。
+	\item 步骤二： 为了保证优势数据矢量拟合和加速回归，对优势数据矢量矩阵$\bm{P_{\upsilon}}$根据其对应的速度采取加权操作(式(\ref{WEI}，\ref{WeiGradde}))。
 	%weighted gradient
 	\begin{eqnarray}\label{WEI}
 	\nabla_{w}D=\frac{1}{n}\bm{P_{\upsilon}}M(F_{w}(\bm{P_{\upsilon}})^{T}-\bm{Q})
